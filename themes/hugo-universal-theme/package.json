@@ -1,13 +1,26 @@
 {
-  "name": "hugo-universal-theme",
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-standard": "^6.2.0",
-    "eslint-plugin-promise": "^3.0.0",
-    "eslint-plugin-standard": "^2.0.1"
-  },
+  "name": "lewisandco-com-hugo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "lewis and co NPM builder for hugo",
   "scripts": {
-    "lint": "eslint .",
-    "install_hugo": "brew update && brew install hugo"
-  }
+    "clean": "rm -f static/*.js static/*.css",
+    "babel:build": "babel assets/js --out-file static/js/site.js --source-maps",
+    "babel:watch": "babel assets/js --watch --out-file static/js/site.js --source-maps",
+    "sass:watch": "onchange 'assets/scss/**/*.scss' -- npm run sass:build",
+    "sass:build": "node-sass --include-path node_modules/bootstrap-sass/assets/stylesheets assets/scss/main.scss static/css/site.css",
+    "build:assets": "npm run clean && npm run sass:build && npm run babel:build",
+    "build": "npm run build:assets && hugo",
+    "start": "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-babili": "0.0.9",
+    "node-sass": "^4.1.1",
+    "onchange": "^3.2.1",
+    "parallelshell": "^2.0.0"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
