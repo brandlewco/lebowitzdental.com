@@ -1,0 +1,27 @@
+<section id="comparison-slider">
+        <!-- *** TESTIMONIALS CAROUSEL *** -->
+        <div class="hidden-sm row text-center valign">
+            <div class="col-md-12 text-center">
+            <h2>Before & After</h2>
+            <h3></h3>
+            </div>
+        </div>
+        <ul class="owl-carousel comparison-slider row">
+            {{ range first 10 (where .Site.Pages "Type" "comparisons") }}
+            <li class="item comparison row bar gray col-sm-12 col-md-10 col-md-offset-1" data-hash="{{ .Title }}">
+                <div class="col-sm-12 col-md-6">
+                    <picture class="fill">
+                        <img class="owl-lazy before-{{.Title}}" data-src="{{ .Params.imageBefore | absURL }}.jpg" alt="before-{{.Title}}">
+                    </picture>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <picture class="fill">
+                        <img class="owl-lazy after-{{.Title}}" data-src="{{ .Params.imageAfter | absURL }}.jpg" alt="after-{{.Title}}">
+                    </picture>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        <!-- /.owl-carousel -->
+        <!-- *** Reviews CAROUSEL END *** -->
+</section>

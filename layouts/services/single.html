@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        <section id="content-wrapper">
+            <div class="navbar-affixed-top">
+                {{ partial "nav-quick.html" . }}
+            </div>
+            {{ partial "breadcrumbs.html" . }}
+            
+            <div id="content">
+                {{ if isset .Params "id" }} {{ partial .Params.id . }} {{ else }}
+                <div class="container">
+                    <div class="row">
+                        {{ if eq .Params.sidebar true }}
+                        <div class="col-md-8">
+                            <div>
+                                {{ .Content }}
+                            </div>
+                        </div>
+                        <div class="col-md-4 sidebar-menu">
+                            <div class="sidebar-panel">
+                            <div class="panel-heading">
+                                <h3>{{ .Params.sidebar_title }}</h3>
+                            </div>
+                            <div class="panel-body no-padding">
+                                {{ partial "widgets/menu_related.html" . }}
+                            </div>
+                            </div>
+                            {{ if eq .Params.sidebar_video true }}
+                                {{ partialCached "vimeo.html" . }}
+                            {{end}}
+                        </div>
+                        {{ else }}
+                        <div class="col-md-12">
+                            <div>
+                                {{ .Content }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+                {{ end }}
+            </div>
+            <!-- /#content -->
+            {{ partial "footer.html" . }}
+        </section>
+    </div>
+    <!-- /#all -->
+    {{ partial "scripts.html" . }}
+</body>
+
+</html>

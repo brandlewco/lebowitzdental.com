@@ -1,0 +1,5 @@
+weight: 5
+layout: block
+name: "Featured Service"
+image: "/img/banners/services"
+url: "/"

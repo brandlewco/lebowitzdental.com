@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body class="home">
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        <section id="content-wrapper">
+            {{ partial "hero.html" . }}
+            <div class="navbar-affixed-top">
+                {{ partial "nav-quick.html" . }}
+            </div>
+            <article id="home" class="container">
+                <div class="row valign">
+                    <div class="col-md-9">
+                        <h2>{{ .Site.Params.hero.title | plainify}}</h2>
+                      {{.Content}}
+                    </div>
+                    <div class="col-md-3">
+                        <img class="award pull-right" src="{{ .Site.Params.hero.award }}">
+                    </div>
+                </div>
+            </article>
+            {{ partialCached "reviews-slider.html" . }}
+            {{ partial "reviews-breadcrumb.html" (dict "Title" "")}}
+            {{ partial "features.html" . }}
+            {{ partial "footer.html" . }}
+        </section>
+    </div>
+    <!-- /#all -->
+    {{ partial "scripts.html" . }}
+</body>
+
+</html>

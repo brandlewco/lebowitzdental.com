@@ -1,0 +1,61 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            {{ if isset .Site.Params "about_us" }}
+            <div class="col-md-6">
+                <h4>{{ i18n "aboutUs" }}</h4> {{ .Site.Params.about_description | markdownify }}
+                <hr class="hidden-md hidden-lg hidden-sm">
+            </div>
+            <!-- /.col-md-6 -->
+            {{ end }}
+            <!-- /.col-md-6 -->
+            {{ if isset .Site.Params "address" }}
+            <div class="col-md-6 text-right">
+                <h4>{{ i18n "contactTitle" }}</h4> {{ .Site.Params.address | markdownify }}
+                <a href="tel:{{ .Site.Params.phone}}" class="btn">{{ .Site.Params.phone_print | safeHTML }}</a>
+                <a href="/contact" class="btn">{{ i18n "contactGoTo" }}</a>
+                <hr class="hidden-md hidden-lg hidden-sm">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            	<p class="pull-right social">
+            		<a href="https://www.facebook.com/LebowitzDental/" class="btn" title="Facebook"><i class="fa fa-facebook"></i></a>
+            		<a href="https://twitter.com/DrLebowitzDDS" class="btn" title="Twitter"><i class="fa fa-twitter"></i></a>
+            		<a href="https://www.linkedin.com/company/lebowitz-dental-associates" class="btn" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+            		<a href="https://www.yelp.com/biz/lebowitz-dental-associates-phoenix-2" class="btn" title="Yelp"><i class="fa fa-yelp"></i></a>
+            		<a href="http://www.youtube.com/user/drlebowitz" class="btn" title="Youtube"><i class="fa fa-youtube"></i></a>
+
+            	</p>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        {{ end }}
+    </div>
+    <!-- /.container -->
+</footer>
+<!-- /#footer -->
+<!-- *** FOOTER END *** -->
+<!-- *** COPYRIGHT ***
+_________________________________________________________ -->
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            {{ if isset .Site.Params "copyright" }}
+            <p class="pull-left">{{ .Site.Params.copyright | safeHTML }}</p>
+            {{ end }}
+            <p class="pull-right">
+                Development - <a href="http://lewisand.co">Lewis & Co.</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- /#copyright -->
+<!-- *** COPYRIGHT END *** -->
+
+</div>
+<!--/#inner-wrap-->
+</div>
+<!--/#outer-wrap-->
+
+

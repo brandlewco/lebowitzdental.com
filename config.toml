@@ -1,0 +1,240 @@
+baseurl = "https://dev-lebowitz.lewisand.co/"
+title = "Lebowitz Dental Associates"
+theme = "hugo-universal-theme"
+languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "devcows"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+
+[[menu.main]]
+    name = "About"
+    url  = "/about/"
+    weight = 1
+
+[[menu.main]]
+    name = "Our Team"
+    url  = "/our-team/"
+    weight = 2
+
+[[menu.main]]
+    name = "Services"
+    url  = "/our-services/"
+    identifier = "services"
+    weight = 3
+
+    [[menu.main]]
+        name = "Quality Care"
+        url  = "/our-services/"
+        parent = "services"
+        weight = 1
+
+    [[menu.main]]
+        name = "Cosmetic Dentistry"
+        url  = "/services/cosmetic-dentistry/"
+        parent = "services"
+        weight = 2
+
+    [[menu.main]]
+        name = "Restorative Dentistry"
+        url  = "/services/restorative-dentistry/"
+        parent = "services"
+        weight = 3
+
+    [[menu.main]]
+        name = "Implant Dentistry"
+        url  = "/services/implant-dentistry/"
+        parent = "services"
+        weight = 4
+
+    [[menu.main]]
+        name = "Invisalign"
+        url  = "/services/invisalign/"
+        parent = "services"
+        weight = 5
+
+    [[menu.main]]
+        name = "Laser Periodontal Treatment"
+        url  = "/services/laser-periodontal-treatment/"
+        parent = "services"
+        weight = 6
+
+    [[menu.main]]
+        name = "TMD"
+        url  = "/services/tmj"
+        parent = "services"
+        weight = 7
+
+    [[menu.main]]
+        name = "Sleep Apnea"
+        url  = "/services/sleep-apnea"
+        parent = "services"
+        weight = 8
+
+
+[[menu.main]]
+    name = "Patients"
+    url  = "/patients/"
+    weight = 4
+
+[[menu.main]]
+    name = "FAQ"
+    url  = "/faqs/"
+    identifier = "FAQs"
+    weight = 5
+
+[[menu.main]]
+    name = "Contact Us"
+    url  = "/contact/"
+    weight = 6
+
+[[menu.quick]]
+    name = "Request&nbsp;Appointmnet"
+    url  = "/appointment/"
+    weight = 1
+    pre = "<i class='fa fa-calendar-plus-o'></i>"
+
+[[menu.quick]]
+    name = "Patient Forms"
+    url  = "/forms/"
+    weight = 2
+    pre = "<i class='fa fa-wpforms'></i>"
+
+[[menu.quick]]
+    name = "Smile Dash Login"
+    url  = "https://www.smiledash.com/"
+    weight = 3
+    pre = "<i class='fa fa-sign-in'></i>"
+
+[[menu.quick]]
+    name = "Reviews"
+    url  = "/reviews/"
+    weight = 4
+    pre = "<i class='fa fa-comment-o'></i>"
+
+[[menu.quick]]
+    name = "Before & After's"
+    url  = "/before-after/"
+    weight = 5
+    pre = "<i class='fa  fa-smile-o'></i>"
+
+[[menu.quick]]
+    name = "Brouchure"
+    url  = "http://www.lebowitzdental.com/ebrochures/"
+    weight = 6
+    pre = "<i class='fa fa-file-pdf-o'></i>"
+
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "Lewis & Co."
+    defaultKeywords = ["lebowitz", "dental", "phoenix"]
+    defaultDescription = "Advanced. Comprehensive. Experienced. Trusted."
+    tagReviews = "Read what our patients think of us."
+
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    googleMapsApiKey = "AIzaSyAPTaiedphMk1QjT0TKBEHePcoeRkeDYpA"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    # style = "lewisandco"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "your@email.com"
+
+    about_us = "<p>Advanced. Comprehensive. Experienced. Trusted.</p>"
+    about_description = "<p>Patients from Phoenix, Scottsdale, Paradise Valley, Mesa, Biltmore, Chandler, Arcadia, and beyond turn to Lebowitz Dental Associates for comprehensive smile care and elite service. Our ultimate goal is to give you and your family the smiles you desire — as quickly, painlessly, and affordably as possible.</p><p>We provide veneers and teeth whitening, tooth-colored fillings, Invisalign® \"invisible\" aligners, CEREC same-day crowns, implant restorations/Teeth in a Day™, and full mouth reconstruction. Our Phoenix dental office also offers comprehensive dental care to make you smile. Visit our dental clinic for cosmetic dentistry, family dentistry, and implant dentistry; advanced reconstructive care, endodontic care, and periodontal care; the latest in cosmetic smile design; TMD and TMJ treatment; and sleep apnea solutions.</p>"
+    copyright = "Copyright &copy;, Lebowitz Dental Associates; all rights reserved."
+
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+    address = """<p><strong>Lebowtiz Dental Associates.</strong>
+        <br>1277 East Missouri Avenue, Suite 205
+        <br>Phoenix, AZ 85014
+        <hr>
+        <br>7 a.m. to 5 p.m.<br>Monday through Thursday.
+      </p>
+      """
+    phone = "+1-602-264-2905"
+    phone_print = "(602) 264-2905"
+    latitude = "33.516206"
+    longitude = "-112.054556"
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = false
+    tags = false
+    search = true
+
+[params.hero]
+    enable = true
+    # image currently being implemented as background image.
+    image = "img/banners/hero"
+    title = "Advanced.<br />Comprehensive.<br />Experianced.<br />Trusted."
+    description = "Celebrating <span class=\"underline\">100</span> years of excellence."
+    award = "img/banners/award-patients_choice.png"
+
+[params.carousel]
+    enable = false
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    title = "Services"
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.reviews]
+    enable = true
+    # For more informtion take a look at the README.
+    # title = "Reviews"
+    # subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+[params.see_more]
+    enable = false
+    icon = "fa fa-file-code-o"
+    title = "Do you want to see more?"
+    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+    link_url = "#"
+    link_text = "Check other homepages"
+
+[params.clients]
+    enable = false
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
+
+[params.recent_posts]
+    enable = false
+    title = "From our blog"
+    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."

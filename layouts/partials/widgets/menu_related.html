@@ -1,0 +1,13 @@
+<ul class="nav category-menu">
+{{ $page_link := .Permalink }}
+{{ $sidebar_tags := .Params.sidebar_tags }}
+{{ range .Site.Pages }}
+    {{ $page := . }}
+    {{ $has_common_sidebar_tags := intersect $sidebar_tags .Params.sidebar_tags | len | lt 0 }}
+    {{ if and $has_common_sidebar_tags (ne $page_link $page.Permalink) }}
+    {{ if not (isset .Params "sidebar_exclude")}}
+        <li><a href="{{ $page.Permalink }}" alt="{{ $page.Title }}">{{ if isset .Params "sidebar_icon" }}<i class="fa {{ .Params.sidebar_icon }}" aria-hidden="true"></i>{{ end }}{{ $page.Title }}</a></li>
+    {{ end }}
+    {{ end }}
+{{ end }}
+</ul>

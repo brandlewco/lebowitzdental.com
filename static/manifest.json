@@ -1,0 +1,15 @@
+{
+  "short_name": "Lebowitz Dental",
+  "name": "Lebowtiz Detal Associates",
+  "icons": [
+    {
+      "src":"",
+      "sizes": "",
+      "type": ""
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#ffffff",
+  "Theme_color": "#3c3245",
+  "display": "standalone"
+}

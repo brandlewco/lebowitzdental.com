@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        <section id="content-wrapper" class="reviews">
+            <div class="navbar-affixed-top">
+                {{ partial "nav-quick.html" . }}
+            </div>
+            <div id="content">
+                {{ if isset .Params "id" }} {{ partial .Params.id . }} {{ else }}
+                <div class="container">
+                    <div id="review-single">
+                        <div class="stars">
+                            {{ $stars := seq .Params.Stars }} {{ $stars := len $stars }} {{ range $rating, seq $stars }}
+                            <i class="fa fa-star"></i> {{ end }}
+                        </div>
+                        <div class="text">
+                            {{ .Content }}
+                            <h3 class="name">{{ .Title }}</h3>
+                            <p><span class="reviewdate">{{ dateFormat "Jan 2, 2006" "2015-01-21" }}</span>
+                                <br />
+                                <span class="patientsince">patient since {{ .Params.Patientsince }}</span></p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+                {{ end }}
+                {{ partial "reviews-breadcrumb.html" (dict "Title" "see why our patients think we're the best!")}}
+                {{ partialCached "reviews-slider.html" . }}
+            </div>
+            <!-- /#content -->
+            {{ partial "footer.html" . }}
+        </section>
+    </div>
+    <!-- /#all -->
+    {{ partial "scripts.html" . }}
+</body>
+
+</html>

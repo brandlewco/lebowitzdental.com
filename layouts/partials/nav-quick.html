@@ -1,0 +1,18 @@
+<div class="navbar yamm hidden-xs" role="navigation" id="navbar-quick">
+    <div class="container">
+        <div class="navbar">
+            <ul class="nav navbar-nav">
+                {{ range .Site.Menus.quick }}
+                <li>
+                    <a href="{{ .URL | safeURL }}" alt="{{ .Name | safeHTML }}">
+                        <span>{{ .Name | safeHTML }}</span> {{ .Pre }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<!-- /#navbar -->
+<!-- *** NAVBAR END ***-->

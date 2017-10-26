@@ -1,0 +1,6 @@
+<p>
+    <a {{ with .Get "url" }} href="{{ . | absURL }}" {{ end }} class="btn btn-lg pill" {{ with .Get "text" }}alt="{{.}}"{{end}}>
+        {{with .Get "icon"}}<i class="fa {{ . }}"></i>{{ end }}
+        {{ with .Get "text" }}{{ . }}{{ end }}
+    </a>
+</p>

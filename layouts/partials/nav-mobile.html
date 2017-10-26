@@ -1,0 +1,24 @@
+<nav id="nav-mobile" role="navigation" class="visible-xs-block">
+    <div class="block">
+        <ul class="nav-default">
+            {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL | safeURL }}" alt="{{ .Name }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        <ul class="nav-quick">
+            {{ range .Site.Menus.quick }}
+            <li>
+                <a href="{{ .URL | safeURL }}" alt="{{ .Name | safeHTML }}">
+                    <span>{{ .Name | safeHTML }}</span> {{ .Pre }}
+                </a>
+            </li>
+            {{ end }} {{ if isset .Site.Params "phone" }}
+            <li>
+                <a href="tel:{{ .Site.Params.phone}}" alt="phone number"><span>{{ .Site.Params.phone_print | safeHTML }}</span> <i class="fa fa-phone"></i></a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>

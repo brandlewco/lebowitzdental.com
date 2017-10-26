@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        <div class="navbar-affixed-top">
+            {{ partial "nav-quick.html" . }}
+        </div>
+        {{ partial "breadcrumbs.html" (dict "Title" "Before & After Gallery") }}
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ .Content }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="before-after">
+                        {{ partial "before-after-slider.html" . }}
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            {{ partial "reviews-breadcrumb.html" (dict "Title" "see why our patients think we're the best!")}} {{ partialCached "reviews-slider.html" . }}
+        </div>
+        <!-- /#content -->
+        {{ partial "footer.html" . }}
+    </div>
+    <!-- /#all -->
+    {{ partial "scripts.html" . }}
+</body>
+
+</html>
