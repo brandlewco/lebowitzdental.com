@@ -1747,11 +1747,16 @@ article {
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
+
     }
+    .review-header {
+            border-right: 1px solid rgba(0,0,0,0.1);
+            text-align: center;
+        }
     .review {
         position: relative;
-        padding: 50px;
-        text-align: center;
+        padding: 40px 0;
+        // text-align: center;
         color: $black;
         span {
             color: $purple;
@@ -1919,6 +1924,9 @@ article {
     }
     .image-block {
         height: 400px;
+        &.title {
+            // background: $purple-light;
+        }
     }
 }
 

@@ -1,34 +1,29 @@
 <section class="bar gray" id="reviews-slider">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- *** TESTIMONIALS CAROUSEL *** -->
-                <ul class="owl-carousel reviews-slider wide">
-                    {{ range first 8 (where .Site.Pages "Type" "reviews") }} {{ if .Params.featured }}
-                    <li class="item equalize">
-                        <div class="review">
-                            <div class="stars">
-                                {{ $stars := seq .Params.Stars }}
-                                {{ $stars := len $stars }}
-                                {{ range $rating, seq $stars }}
-                                <i class="fa fa-star"></i>
-                                {{ end }}
-                            </div>
-                            <div class="text">
-                                {{ .Content }}
-                                <h3 class="name">{{ .Title }}</h3>
-                                <p><span class="reviewdate">{{ dateFormat "Jan 2, 2006" .Params.Date }}</span>
-                                <br />
-                                <span class="patientsince">patient since {{ .Params.Patientsince }}</span></p>
-                            </div>
-                        </div>
-                    </li>
-                    {{ end }} {{ end }}
-                </ul>
-                <!-- /.owl-carousel -->
-                <!-- *** Reviews CAROUSEL END *** -->
-            </div>
-        </div>
+        <!-- *** TESTIMONIALS CAROUSEL *** -->
+        <ul class="owl-carousel reviews-slider wide">
+            {{ range first 8 (where .Site.Pages "Type" "reviews") }} {{ if .Params.featured }}
+            <li class="item equalize valign">
+                <div class="review row">
+                    <div class="col-sm-12 col-md-4 review-header">
+                        {{ $stars := seq .Params.Stars }} {{ $stars := len $stars }} {{ range $rating, seq $stars }}
+                        <i class="fa fa-star"></i> {{ end }}
+                        <h3 class="name">{{ .Title }}</h3>
+                        <p><span class="reviewdate">{{ dateFormat "Jan 2, 2006" .Params.Date }}</span>
+                            <br />
+                            <span class="patientsince">patient since {{ .Params.Patientsince }}</span></p>
+                    </div>
+                    <div class="col-sm-14 col-md-8">
+                    <div class="review-text">
+                        {{ .Content }}
+                    </div>
+                </div>
+                </div>
+            </li>
+            {{ end }} {{ end }}
+        </ul>
+        <!-- /.owl-carousel -->
+        <!-- *** Reviews CAROUSEL END *** -->
     </div>
 </section>
 <!-- ".Params.featured"  "true"

@@ -3,7 +3,7 @@ stars = 5
 patientsince = "2004"
 date = "2017-03-31"
 title = "Marie C."
-featured = true
+featured = false
 title_seo = "Patient Reviews - Lebowitz Dental Associates"
 
 +++

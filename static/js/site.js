@@ -20,9 +20,9 @@ function sliders() {
     if ($('.owl-carousel').length) {
 
         $('.reviews-slider').owlCarousel({
-            nav: true, // Show next and prev buttons
-            navText: ['<i class="fa fa-play fa-flip"></i>', '<i class="fa fa-play"></i>'],
-            dots: false,
+            nav: false, // Show next and prev buttons
+            //navText: ['<i class="fa fa-play fa-flip"></i>', '<i class="fa fa-play"></i>'],
+            dots: true,
             items: 1,
             slideSpeed: 500,
             paginationSpeed: 300,
@@ -31,7 +31,9 @@ function sliders() {
             singleItem: true,
             margin: 10,
             autoHeight: true,
-            autoHeightClass: 'equalize'
+            autoHeightClass: 'equalize',
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn'
         });
 
         $('.comparison-slider').owlCarousel({

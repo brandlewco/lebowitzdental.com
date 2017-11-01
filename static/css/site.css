@@ -1688,10 +1688,12 @@ article#home {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
+  #reviews-slider .review-header {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center; }
   #reviews-slider .review {
     position: relative;
-    padding: 50px;
-    text-align: center;
+    padding: 40px 0;
     color: #000; }
     #reviews-slider .review span {
       color: #3c3245; }
