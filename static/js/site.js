@@ -46,6 +46,7 @@ function sliders() {
             paginationSpeed: 300,
             autoPlay: true,
             stopOnHover: true,
+            singleItem: true,
             margin: 10,
             autoHeight: true,
             autoHeightClass: 'equalize',
@@ -76,71 +77,72 @@ function menuSliding() {
     });
 }
 
-/* animations */
-function animations() {
-    var delayTime = 0;
-    $('[data-animate]').css({ opacity: '0' });
-    $('[data-animate]').waypoint(function () {
-        delayTime += 150;
-        $(this).delay(delayTime).queue(function (next) {
-            $(this).toggleClass('animated');
-            $(this).toggleClass($(this).data('animate'));
-            delayTime = 0;
-            next();
-            // $(this).removeClass('animated')
-            // $(this).toggleClass($(this).data('animate'))
-        });
-    }, {
-        offset: '90%',
-        triggerOnce: true
-    });
+// /* animations */
+// function animations() {
+//     var delayTime = 0
+//     $('[data-animate]').css({ opacity: '0' })
+//     $('[data-animate]').waypoint(function() {
+//         delayTime += 150
+//         $(this).delay(delayTime).queue(function(next) {
+//             $(this).toggleClass('animated')
+//             $(this).toggleClass($(this).data('animate'))
+//             delayTime = 0
+//             next()
+//                 // $(this).removeClass('animated')
+//                 // $(this).toggleClass($(this).data('animate'))
+//         })
+//     }, {
+//         offset: '90%',
+//         triggerOnce: true
+//     })
 
-    $('[data-animate-hover]').hover(function () {
-        $(this).css({ opacity: 1 });
-        $(this).addClass('animated');
-        $(this).removeClass($(this).data('animate'));
-        $(this).addClass($(this).data('animate-hover'));
-    }, function () {
-        $(this).removeClass('animated');
-        $(this).removeClass($(this).data('animate-hover'));
-    });
-}
+//     $('[data-animate-hover]').hover(function() {
+//         $(this).css({ opacity: 1 })
+//         $(this).addClass('animated')
+//         $(this).removeClass($(this).data('animate'))
+//         $(this).addClass($(this).data('animate-hover'))
+//     }, function() {
+//         $(this).removeClass('animated')
+//         $(this).removeClass($(this).data('animate-hover'))
+//     })
+// }
 
-function animationsSlider() {
-    var delayTimeSlider = 400;
+// function animationsSlider() {
+//     var delayTimeSlider = 400
 
-    $('.owl-item:not(.active) [data-animate-always]').each(function () {
-        $(this).removeClass('animated');
-        $(this).removeClass($(this).data('animate-always'));
-        $(this).stop(true, true, true).css({ opacity: 0 });
-    });
+//     $('.owl-item:not(.active) [data-animate-always]').each(function() {
+//         $(this).removeClass('animated')
+//         $(this).removeClass($(this).data('animate-always'))
+//         $(this).stop(true, true, true).css({ opacity: 0 })
+//     })
 
-    $('.owl-item.active [data-animate-always]').each(function () {
-        delayTimeSlider += 500;
+//     $('.owl-item.active [data-animate-always]').each(function() {
+//         delayTimeSlider += 500
 
-        $(this).delay(delayTimeSlider).queue(function () {
-            $(this).addClass('animated');
-            $(this).addClass($(this).data('animate-always'));
+//         $(this).delay(delayTimeSlider).queue(function() {
+//             $(this).addClass('animated')
+//             $(this).addClass($(this).data('animate-always'))
 
-            console.log($(this).data('animate-always'));
-        });
-    });
-}
+//             console.log($(this).data('animate-always'))
+//         })
+//     })
+// }
 
-/* full screen intro */
-function fullScreenContainer() {
-    var screenWidth = $(window).width() + 'px';
-    var screenHeight = '500px';
 
-    if ($(window).height() > 500) {
-        screenHeight = $(window).height() + 'px';
-    }
+// /* full screen intro */
+// function fullScreenContainer() {
+//     var screenWidth = $(window).width() + 'px'
+//     var screenHeight = '500px'
 
-    $('#intro, #intro .item').css({
-        width: screenWidth,
-        height: screenHeight
-    });
-}
+//     if ($(window).height() > 500) {
+//         screenHeight = $(window).height() + 'px'
+//     }
+
+//     $('#intro, #intro .item').css({
+//         width: screenWidth,
+//         height: screenHeight
+//     })
+// }
 
 function utils() {
     /* tooltips */
