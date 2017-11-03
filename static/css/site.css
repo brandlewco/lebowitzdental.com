@@ -2147,7 +2147,7 @@ article#home {
 #footer {
   background: #E5E5E5;
   padding: 50px 0;
-  border-top: 50px solid #3c3245; }
+  border-top: 50px solid #5c4f67; }
   #footer h1,
   #footer h2,
   #footer h3,
@@ -2742,19 +2742,19 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   list-style: none; }
   #social li a {
     display: block;
-    height: 50px;
-    width: 50px;
     background: #fff;
     color: #5c4f67;
     -webkit-font-smoothing: antialiased;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     text-align: center;
     transition: background .5s ease .300ms;
     border-radius: 0; }
     #social li a i:before {
-      color: #000;
-      transition: color .5s ease .300ms; }
+      color: #5c4f67;
+      transition: color .5s ease .300ms;
+      font-size: 1.2em;
+      line-height: 1.5em; }
     #social li a:hover {
       color: #fff; }
       #social li a:hover i:before {
@@ -2769,10 +2769,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     background: #d32323; }
   #social li:nth-child(5) a:hover {
     background: #ff0000; }
-  #social li:first-child a {
-    border-radius: 5px 0 0 0px; }
-  #social li:last-child a {
-    border-radius: 0 0 0 5px; }
 
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;

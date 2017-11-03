@@ -2897,7 +2897,7 @@ article {
 #footer {
     background: $gray;
     padding: 50px 0;
-    border-top: 50px solid $purple;
+    border-top: 50px solid $purple-light;
     h1,
     h2,
     h3,
@@ -3691,20 +3691,20 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
     li a {
         display: block;
-        height: 50px;
-        width: 50px;
         background: $white;
         color: $purple-light;
         -webkit-font-smoothing: antialiased;
-        padding: 10px;
+        padding: 15px;
         text-decoration: none;
         text-align: center;
         transition: background .5s ease .300ms;
         border-radius: 0;
 
         i:before {
-            color: $black;
+            color: $purple-light;
             transition: color .5s ease .300ms;
+            font-size: 1.2em;
+            line-height: 1.5em;
         }
         &:hover {
             color: $white;
@@ -3728,13 +3728,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     }
     li:nth-child(5) a:hover {
         background: #ff0000;
-    }
-
-    li:first-child a {
-        border-radius: 5px 0 0 0px;
-    }
-    li:last-child a {
-        border-radius: 0 0 0 5px;
     }
 }
 
