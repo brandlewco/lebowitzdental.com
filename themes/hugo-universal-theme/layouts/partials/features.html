@@ -8,8 +8,7 @@
             <div class="col-sm-12 col-md-4 image-block {{ .layout}}">
                 {{ if .image }}
                 <picture>
-                    <source srcset="{{ .image }}.jpg, {{ .image }}@2x.jpg 2x" />
-                    <img src="{{ .image }}-xl.jpg">
+                    <img src="{{ .image }}.jpg">
                 </picture>
                 {{ end }}
                 <div class="text-{{ .layout}}">
