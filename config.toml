@@ -1,4 +1,4 @@
-baseurl = "http://lebowitz.lewcrew.co/"
+baseurl = "https://lebowitz.lewcrew.co/"
 title = "Lebowitz Dental Associates"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
