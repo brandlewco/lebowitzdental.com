@@ -22,6 +22,8 @@
                         <img class="award pull-right" src="{{ .Site.Params.hero.award }}">
                     </div>
                 </div>
+                {{ partial "sidebar-social.html" . }}
+
             </article>
             {{ partialCached "reviews-slider.html" . }}
 <!--             {{ partial "reviews-breadcrumb.html" (dict "Title" "")}}

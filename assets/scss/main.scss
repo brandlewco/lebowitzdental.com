@@ -3681,53 +3681,49 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 #social {
-    position: fixed;
-    top: 150px;
-    right: 0;
-    perspective: 1000px;
-    z-index: 9999;
-
     list-style: none;
+    width: 100%;
 
     li a {
-        display: block;
-        background: $white;
+        display: inline-block;
         color: $purple-light;
+        background-color: transparent;
         -webkit-font-smoothing: antialiased;
         padding: 15px;
         text-decoration: none;
         text-align: center;
         transition: background .5s ease .300ms;
         border-radius: 0;
+        float: left;
 
         i:before {
             color: $purple-light;
             transition: color .5s ease .300ms;
-            font-size: 1.2em;
+            font-size: 1.5em;
             line-height: 1.5em;
         }
         &:hover {
-            color: $white;
+            color: $purple;
             i:before {
-                color: $white;
+                color: $purple;
             }
         }
     }
 
-    li:first-child a:hover {
-        background: #3b5998;
+    li:first-child a:hover i:before{
+        color: #3b5998;
     }
-    li:nth-child(2) a:hover {
-        background: #00acee;
+    li:nth-child(2) a:hover i:before{
+        color: #00acee;
     }
-    li:nth-child(3) a:hover {
-        background: #0077b5;
+    li:nth-child(3) a:hover i:before{
+        color: #0077b5;
     }
-    li:nth-child(4) a:hover {
-        background: #d32323;
+    li:nth-child(4) a:hover i:before{
+        color: #d32323;
     }
-    li:nth-child(5) a:hover {
-        background: #ff0000;
+    li:nth-child(5) a:hover i:before{
+        color: #ff0000;
     }
 }
 
@@ -3995,6 +3991,14 @@ label {
             display: block;
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+    .features {
+        .margin-bottom{
+            margin-bottom: 0;
+        }
+        .image-block{
+            height: 200px;
         }
     }
 }
