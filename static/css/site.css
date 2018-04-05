@@ -481,6 +481,8 @@ figure.profile {
   float: left;
   clear: both;
   margin: 0 15px 15px 0; }
+  figure.profile img {
+    max-width: 250px; }
   figure.profile:before, figure.profile:after {
     content: " ";
     display: table; }

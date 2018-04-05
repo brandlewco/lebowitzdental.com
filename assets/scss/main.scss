@@ -242,6 +242,9 @@ figure {
         float: left;
         clear: both;
         margin: 0 15px 15px 0;
+        img {
+            max-width: 250px;
+        }
         &:before,
         &:after {
             content: " ";

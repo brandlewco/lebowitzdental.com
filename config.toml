@@ -194,7 +194,7 @@ paginate = 10
 [params.hero]
     enable = true
     # image currently being implemented as background image.
-    image = "img/banners/hero"
+    image = "img/banners/hero/"
     title = "Advanced.<br />Comprehensive.<br />Experianced.<br />Trusted."
     description = "Celebrating <span class=\"underline\">100</span> years of excellence."
     award = "img/banners/award-patients_choice.png"

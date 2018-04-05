@@ -9,7 +9,7 @@ keywords = ["Our Team","Dentists","Doctors","Physicians","Staff","Office","Techn
 
 # Michael B. Lebowitz, DDS
 
-{{< figure src="http://placehold.it/200x300/5c4f67/ffffff?text=PLACEHOLDER" title="Michael B. Lebowitz" class="profile" >}}
+{{< figure src="/img/office/IMG_9066.jpg" title="Michael B. Lebowitz" class="profile" >}}
 
 &quot;I am compassionate toward all of my patients. I listen to them and try to understand their concerns and desires. I hope to give them a feeling of comfort and trust — and then exceed their expectations.&quot;
 

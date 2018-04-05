@@ -1,16 +1,16 @@
 {{ if isset .Site.Params "hero" }} {{ if .Site.Params.hero.enable }}
 <div class="home-hero">
     <picture>
-        <img srcset="{{ .Site.Params.hero.image }}-sm.jpg 1024w,
-             {{ .Site.Params.hero.image }}-md.jpg 1440w,
-             {{ .Site.Params.hero.image }}-lg.jpg 1920w,
-             {{ .Site.Params.hero.image }}-xl.jpg 2880w"
+        <img srcset="{{ .Site.Params.hero.image }}sm.jpg 1024w,
+             {{ .Site.Params.hero.image }}md.jpg 1440w,
+             {{ .Site.Params.hero.image }}lg.jpg 1920w,
+             {{ .Site.Params.hero.image }}xl.jpg 2880w"
      sizes="(max-width: 1024px) 1024px,
             (max-width: 1440px) 1440px,
             (max-width: 1920px) 1920px,
             (min-width: 2880px) 2880px,
             1440px"
-     src="{{ .Site.Params.hero.image }}-m.jpg" alt="Lebowitz Dental">
+     src="{{ .Site.Params.hero.image }}m.jpg" alt="Lebowitz Dental">
     </picture>
 
     <div class="container">
