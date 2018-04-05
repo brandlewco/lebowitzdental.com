@@ -24,6 +24,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "imagemin-jpegoptim": "^5.2.0",
     "npm-check-updates": "^2.14.1"
   }
 }
