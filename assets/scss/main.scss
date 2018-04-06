@@ -1533,12 +1533,14 @@ article {
 .home-hero {
     position: relative;
     background: $white;
-    height: calc(100vh - 210px);
+    height: auto;
+    max-height: calc(100vh - 210px);
     overflow: hidden;
     @include fadeInUp();
     .container {
         height: 100%;
         overflow: hidden;
+        padding: 8rem 0rem;
     }
     picture {
         @include valign();

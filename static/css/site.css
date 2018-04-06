@@ -1480,7 +1480,8 @@ article#home {
 .home-hero {
   position: relative;
   background: #fff;
-  height: calc(100vh - 210px);
+  height: auto;
+  max-height: calc(100vh - 210px);
   overflow: hidden;
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -1519,7 +1520,8 @@ article#home {
   backface-visibility: hidden; }
   .home-hero .container {
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 8rem 0rem; }
   .home-hero picture {
     display: flex;
     align-items: center;
