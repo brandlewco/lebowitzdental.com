@@ -1,0 +1,28 @@
+{{ if isset .Site.Params "features" }}
+{{ if .Site.Params.features.enable }}
+{{ if gt (len .Site.Data.features) 0 }}
+<section class="bar background-white features">
+    
+{{ range $index, $element := sort .Site.Data.features "weight" }}
+{{ if eq (mod $index 3) 0 }}
+<div class="card-deck">
+{{ end }}
+
+    <div class="card">
+        <img class="card-img" src="{{ .image }}.jpg" alt="Card image">
+        <div class="card-img-overlay">
+            <h5 class="card-title">{{.name}}</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+                little bit longer.</p>
+            <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+    </div>
+
+{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+</div>
+{{ end }}
+{{ end }}
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

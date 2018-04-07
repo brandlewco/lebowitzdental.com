@@ -28,7 +28,7 @@
                     <a href="{{ .URL }}" alt="{{ .Name }}">{{ .Name }}</a> {{ end }}
                 </li>
                 {{ end }} {{ if isset .Site.Params "phone" }}
-                <li><a href="tel:{{ .Site.Params.phone}}" class="phone btn" alt="phone number">{{ .Site.Params.phone_print | safeHTML }}</a></li>
+                <li><a href="tel:{{ .Site.Params.phone}}" class="phone btn fixed-sm" alt="phone number">{{ .Site.Params.phone_print | safeHTML }}</a></li>
                 {{ end }}
             </ul>
         </div>

@@ -4,8 +4,8 @@
         {{ range $index, $element := sort .Site.Data.features "weight" }} {{ if eq (mod $index 3) 0 }}
         <div class="row margin-bottom">
             {{ end }}
-            <a href="{{ .url }}" href="{{.url}}" alt="{{.name}}">
-            <div class="col-sm-12 col-md-4 image-block {{ .layout}}">
+            <div class="col-sm-12 col-md-4 image-block {{ .layout}}" >
+                <a href="{{ .url }}" href="{{.url}}" alt="{{.name}}">
                 {{ if .image }}
                 <picture>
                     <img src="{{ .image }}.jpg">
@@ -18,8 +18,8 @@
                     <p><a href="{{.url}}" alt="{{.name}}" class="btn">{{.button}}</a></p>
                     {{end}}
                 </div>
+                </a>
             </div>
-            </a>
             {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
         </div>
         {{ end }} {{ end }}
